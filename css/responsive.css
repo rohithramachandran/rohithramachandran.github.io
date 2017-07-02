@@ -1,0 +1,211 @@
+@media only screen and (min-width:768px) {
+    .resume-box {
+        position: relative;
+        padding-left: 130px
+    }
+    .resume-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 120px;
+        height: 100%
+    }
+    .resume-icon i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%)
+    }
+    .portfolio-background .row,
+    .services-background .row {
+        margin: 0 -5px
+    }
+    .mix,
+    .service-box {
+        padding: 5px
+    }
+    .blog-post-box {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex
+    }
+    .blog-post-box-img {
+        display: inline-block;
+        width: 50%;
+        padding-right: 5px
+    }
+    .blog-post-box-content {
+        position: relative;
+        padding-left: 5px;
+        display: inline-block;
+        width: 50%;
+        min-height: 100%
+    }
+    .blog-post-box-content a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 5px
+    }
+    .blog-post-box-content div {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translate(0, -50%);
+        -moz-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+        -o-transform: translate(0, -50%);
+        transform: translate(0, -50%);
+        padding-right: 30px
+    }
+    .contact-form-box {
+        padding: 0 15px 0 0
+    }
+    .contact-info {
+        padding: 0 0 0 15px
+    }
+}
+
+@media only screen and (min-width:992px) {
+    body {
+        padding-left: 380px
+    }
+    .sticky-sidebar-menu {
+        width: 380px
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    body {
+        padding-left: 320px
+    }
+    .sticky-sidebar-menu {
+        width: 320px
+    }
+    .about-img {
+        padding: 0 15px 0 0
+    }
+    .about-content {
+        padding: 20px 0 0 15px
+    }
+    .testimonial-container {
+        display: inline-block;
+        max-width: 640px;
+        margin: 0 auto
+    }
+}
+
+@media only screen and (max-width:1200px) {
+    .about-img {
+        padding: 0 0 15px
+    }
+    .about-content {
+        padding: 15px 0 0
+    }
+    .facts-background {
+        padding: 65px 35px
+    }
+}
+
+@media only screen and (max-width:992px) {
+    .sticky-sidebar-menu {
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        width: 100%;
+        height: auto;
+        -webkit-transition: ease-out .2s;
+        -moz-transition: ease-out .2s;
+        -o-transition: ease-out .2s;
+        transition: ease-out .2s
+    }
+    .show-menu,
+    .toggle-btn {
+        visibility: visible
+    }
+    .sidebar-top {
+        top: 30px;
+        left: 30px
+    }
+    .sidebar-menu {
+        left: 30px
+    }
+    .sidebar-menu ul li {
+        padding: 10px 0;
+        font-size: 20px;
+        line-height: 20px
+    }
+    .sidebar-social {
+        bottom: 30px;
+        left: 30px
+    }
+    .show-menu {
+        opacity: 1
+    }
+    .about-background,
+    .blog-background,
+    .contact-background,
+    .footer-background,
+    .portfolio-background,
+    .resume-background,
+    .services-background,
+    .testimonial-dark-layer {
+        padding-right: 30px;
+        padding-left: 30px
+    }
+    .section-title::before {
+        left: -30px;
+        width: 30px
+    }
+    .facts-background {
+        padding: 65px 15px
+    }
+    .facts-box {
+        padding-top: 15px;
+        padding-bottom: 15px
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .skill-box {
+        margin-bottom: 30px
+    }
+    .blog-post-box,
+    .mix,
+    .resume-box,
+    .service-box {
+        margin-bottom: 30px;
+        padding: 0
+    }
+    .blog-post-box-box:last-child,
+    .mix:last-child,
+    .resume-box:last-child,
+    .service-box:last-child,
+    .skill-box:last-child {
+        margin: 0
+    }
+    .resume-icon {
+        margin-bottom: 10px;
+        padding: 30px
+    }
+    .blog-post-box-content {
+        margin-top: 10px
+    }
+    .blog-post-box-content a {
+        padding: 50px 30px
+    }
+    .contact-form-box {
+        padding: 0 0 25px
+    }
+    .contact-info {
+        padding: 25px 0 0
+    }
+}
