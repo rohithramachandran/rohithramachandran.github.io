@@ -145,7 +145,7 @@ function skillItem(image,itemName,category,itemDescription,id){
                                             html+='<span>Databases</span>';
                                         else if(category==5)
                                             html+='<span>Tools</span>';
-                                        else if(category==5)
+                                        else if(category==6)
                                             html+='<span>Servers</span>';
                                 html+='</div>'
                                 +'</div>'
