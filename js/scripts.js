@@ -3,6 +3,13 @@ $(function() {
     $(window).load(function() {
         $("body").addClass("loaded")
     });
+    var typed = new Typed('#aboutMe', {
+		  strings: ["I'm a Web Designer","I'm a Web Designer", "I'm a Backend Expert.","I'm Mobile App Developer", "Yes... I am a fullstack engineer" ],
+		  typeSpeed: 100,
+		  startDelay: 100,
+		  loop: true,
+	  		loopCount: Infinity
+	});
     $('body').scrollspy({
         target: '.sidebar-menu'
     });
