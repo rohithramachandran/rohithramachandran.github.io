@@ -1,0 +1,63 @@
+.portfolio-box {
+            height: 85px;
+            padding: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .portfolio-box img {
+            -webkit-filter: grayscale(100%);
+            /* Safari 6.0 - 9.0 */
+            filter: grayscale(100%);
+        }
+
+        .popup-box img {
+            transform: scale(0.8);
+        }
+
+        .paper-content {
+            background: whitesmoke;
+        }
+
+        .paper-item {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            min-height: 52px;
+            background: hsla(0, 0%, 8%, 0.22);
+            box-shadow: none;
+            z-index: auto;
+            border-top: none;
+            border-bottom: none;
+            padding: 20px;
+        }
+
+        .paper-item div:first-child {
+            border-bottom: 1px solid #141414;
+            font-weight: bold;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .paperfold-toggle {
+            background: none;
+            border: none;
+            text-decoration: underline;
+            float: right;
+            font-weight: bold;
+        }
+
+        .paper-item b {
+            font-size: 13px;
+        }
+
+        .about-img {
+            height: 216px;
+            overflow: hidden;
+            filter: grayscale;
+            filter: grayscale(76%);
+        }
+
+        .typed-cursor {
+            display: none;
+        }

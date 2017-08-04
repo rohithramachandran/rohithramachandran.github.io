@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>ROHITH RAMACHANDRAN</title>
+    <!-- Favicon -->
+    <!--<link rel="shortcut icon" href="images/favicon.png">-->
+    <!-- ##### STYLESHEETS ##### -->
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Linea Icons -->
+    <link href="linea/styles.css" rel="stylesheet">
+    <!-- Owl Carousel -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <!-- Magnific popup -->
+    <link href="css/magnific-popup.min.css" rel="stylesheet">
+    <!-- Preloader -->
+    <link href="css/preloader.min.css" rel="stylesheet">
+    <!-- Main styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- Responsive -->
+    <link href="css/responsive.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,700,900" rel="stylesheet">
+    <link href="css/newStyles.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <script src="https://use.fontawesome.com/6b1c55af8a.js"></script>
+
+    <style>
+        
+    </style>
+
+</head>
+
+<body >
+    <div class="preloader">
+          <!--<div class="loader"></div>-->
+            <div class="loader">
+                <span>{</span><span>}</span>
+            </div>
+    </div>
+            <button class="toggle-btn">
+                <span class="lines"></span>
+            </button>
+            
+        <!-- Sticky Sidebar menu -->
+        <div class="sticky-sidebar-menu">
+            <div class="sidebar-top">
+                <img src="images/myimage.jpeg" alt="" style="margin-top: -42px;">
+                <h4 style="    line-height: 20px;"><br>Rohith R <br> [+91]9995460495 <br>Full Stack Engineer </h4>
+            </div>
+            <!-- Sidebar menu links -->
+            <div class="sidebar-menu" id="sideMenu">
+                
+            </div><!-- end Sidebar menu links -->
+            <!-- Sidebar Social media links -->
+            <div class="sidebar-social">
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/rohith.ramachandran">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/rohithramachandran">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/rohith-ramachandran-6bba6638">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                    </li>
+                      <li>
+                        <a target="_blank" href="https://plus.google.com/u/1/+RohithR_karthika">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- end Sidebar Social media links -->
+        </div>
+        <!-- end Sticky Sidebar menu -->
+
+    
+
+    
+    <script src="js/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
+    <script type="text/babel">
+        var mountNode=document.getElementById('sideMenu'); 
+        class SideMenuItem extends React.Component { 
+            constructor(){
+                super();
+                this.state={active:1};
+            }
+            componentDidMount(){
+                var i=0;
+                setInterval(()=>{
+                    i++;
+                    this.setState({"active":i%2});
+                },1000);
+            }
+
+             render() { 
+                 if(this.state.active==0){
+                    return (
+                    <li className="active">
+                        <a href="#{this.props.href}">{this.props.name}</a>
+                    </li>
+                );
+                 }else{
+                     return (
+                    <li >
+                        <a href="#{this.props.href}">{this.props.name}</a>
+                    </li>
+                );
+                 }
+                
+             }
+        }
+
+        class Main extends React.Component { 
+            constructor(){
+                super();
+                this.state={class:"nav"};
+                
+            }
+            componentDidMount() {
+                document.body.classList.toggle('loaded', true);
+                setInterval(()=>{
+                    this.setState({class:"hai"});
+                    
+                },1000);
+            }
+            
+            componentWillUnmount() {
+                
+            }
+
+
+            render() { 
+                return (
+                    
+                <ul className={this.state.class}>
+                    
+                    <SideMenuItem name="Home" href="home" active="true" />
+                    <SideMenuItem name="About" href="about"/>
+                   
+                    <li>
+                        <a href="#work">Work</a>
+                    </li>
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#academic">Academic</a>
+                    </li>
+                   
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>); 
+            }
+         } 
+         ReactDOM.render(<Main name="John" />, mountNode);
+    </script>
+
+</body>
+
+</html>

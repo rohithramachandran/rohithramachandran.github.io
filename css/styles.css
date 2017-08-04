@@ -553,7 +553,8 @@ img {
     -webkit-transition: linear .1s;
     -moz-transition: linear .1s;
     -o-transition: linear .1s;
-    transition: linear .1s
+    transition: linear .1s;
+    z-index: 100;
 }
 
 .owl-dot,
