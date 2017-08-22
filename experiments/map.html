@@ -1,0 +1,55 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <button type="button" onclick="takeMeToMaps()">Take me to map</button>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+            function takeMeToMaps(){
+                var ua = navigator.userAgent.toLowerCase(),
+    plat = navigator.platform,
+    protocol = '',
+    a,
+    href;
+
+$.browser.device = ua.match(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera/i) ? ua.match(/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera/i)[0] : false;
+
+
+if ($.browser.device) {
+    switch($.browser.device) {
+        case 'iphone':
+        case 'ipad':
+        case 'ipod':
+            function iOSversion() {
+              if (/iP(hone|od|ad)/.test(navigator.platform)) {
+                // supports iOS 2.0 and later: <http://bit. ly/TJjs1V>
+                var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+                return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+              }
+            }
+
+            var ver = iOSversion() || [0];
+
+            if (ver[0] >= 6) {
+              protocol = 'maps://';
+            }
+            else {
+                protocol = 'http://maps.google.com/maps';
+            }
+        break;
+
+        case 'android':
+        default:
+            protocol = 'http://maps.google.com/maps';
+        break;
+    }
+
+                //a.attr('href', protocol + href)'
+                href="?daddr=12.9167053,77.6020568&amp;ll=";
+                window.open(protocol + href);
+            }
+            }
+        </script>
+
+    </body>
+</html>
