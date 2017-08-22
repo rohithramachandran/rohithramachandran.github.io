@@ -40,6 +40,7 @@ if ( browser.chrome ) {
 
 jQuery.browser = browser;
 
+
             function takeMeToMaps(){
                 var ua = navigator.userAgent.toLowerCase(),
     plat = navigator.platform,
@@ -81,6 +82,10 @@ if ($.browser.device) {
 
                 //a.attr('href', protocol + href)'
                 href="?daddr=12.9167053,77.6020568&amp;ll=";
+                window.open(protocol + href);
+            }else{
+                var protocol = 'http://maps.google.com/maps';
+                var href="?daddr=12.9167053,77.6020568&amp;ll=";
                 window.open(protocol + href);
             }
             }
