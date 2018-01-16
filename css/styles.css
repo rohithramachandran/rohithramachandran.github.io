@@ -915,3 +915,8 @@ textarea {
     text-align: center;
     color: rgba(255, 255, 255, .8)
 }
+canvas {
+    background: #dedede;
+    display: block;
+    margin: 0 auto;
+}
