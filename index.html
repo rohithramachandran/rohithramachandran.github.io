@@ -538,19 +538,27 @@
                     <ul>
                         <li>
                             <h4>Number of block rows (Sets only from next game)</h4>
-                            <p><input type="text" value="4" id="number_of_block"></p>
+                            <p>
+                                <input type="text" value="4" id="number_of_block">
+                            </p>
                         </li>
                         <li>
                             <h4>Ball Speed (Sets only from next game)</h4>
-                            <p><input type="text" value="2" id="ball_speed"></p>
+                            <p>
+                                <input type="text" value="2" id="ball_speed">
+                            </p>
                         </li>
                         <li>
                             <h4>Theme</h4>
-                            <p><input type="text" value="black" id="game_theme"></p>
+                            <p>
+                                <input type="text" value="black" id="game_theme">
+                            </p>
                         </li>
                         <li>
                             <h4>Autoplay</h4>
-                            <p><input checked type="checkbox"  id="automated_play"></p>
+                            <p>
+                                <input checked type="checkbox" id="automated_play">
+                            </p>
                         </li>
                     </ul>
                 </div>
@@ -587,6 +595,18 @@
     <script src="js/typed.min.js"></script>
     <!-- Custom Scripts -->
     <script src="js/scripts.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112731883-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112731883-1');
+</script>
+
+
 
 
     <script>
@@ -647,7 +667,7 @@
         var brickOffsetLeft = 30;
 
         var score = 0;
-        var speed=2;
+        var speed = 2;
         var interval;
 
 
@@ -666,6 +686,14 @@
 
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
+        document.addEventListener("mousemove", mouseMoveHandler, false);
+
+        function mouseMoveHandler(e) {
+            var relativeX = e.clientX - canvas.offsetLeft;
+            if (relativeX > 0 && relativeX < canvas.width) {
+                paddleX = relativeX - paddleWidth / 2;
+            }
+        }
 
         function keyDownHandler(e) {
             if (e.keyCode == 39) {
@@ -686,7 +714,7 @@
 
         function drawPaddle() {
             ctx.beginPath();
-            if(document.getElementById("automated_play").checked==true)
+            if (document.getElementById("automated_play").checked == true)
                 paddleX = x - 20;
             ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
             ctx.fillStyle = document.getElementById("game_theme").value;
@@ -780,7 +808,7 @@
             dx = 2;
             dy = -2;
             brickRowCount = parseInt(document.getElementById("number_of_block").value);
-            speed= parseInt(document.getElementById("ball_speed").value);
+            speed = parseInt(document.getElementById("ball_speed").value);
             paddleX = (canvas.width - paddleWidth) / 2;
             rightPressed = false;
             leftPressed = false;
@@ -798,15 +826,11 @@
                     };
                 }
             }
-            if(interval)
+            if (interval)
                 clearInterval(interval);
             interval = setInterval(draw, speed);
 
         }
-
-
-        
-       
     </script>
 
 </body>
