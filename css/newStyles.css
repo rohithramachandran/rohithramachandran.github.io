@@ -61,3 +61,24 @@
         .typed-cursor {
             display: none;
         }
+        #lettersCanvas{
+            opacity: 0.4;
+            background: rgba(0, 0, 0, 0.32941176470588235);
+        }
+.resume-background{
+    position: relative;
+}
+.section-title{
+    z-index: 1;
+}
+.resume-box{
+    z-index: 1;
+}
+.sketch{
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    background: white;
+    width: 100%;
+    height:100%;
+}

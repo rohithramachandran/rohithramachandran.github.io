@@ -46,6 +46,7 @@
         <!--<div class="loader"></div>-->
         <div class="loader">
             <span>{</span>
+            <span>CODE</span>
             <span>}</span>
         </div>
 
@@ -59,9 +60,10 @@
     <!-- end Toggle button -->
 
     <!-- Sticky Sidebar menu -->
-    <div class="sticky-sidebar-menu">
+    <div class="sticky-sidebar-menu" id="particle_on_move">
         <div class="sidebar-top">
             <img src="images/myimage.jpeg" alt="" style="margin-top: -42px;">
+
             <h4 style="    line-height: 20px;">
                 <br>Rohith R
                 <br> [+91]9995460495
@@ -125,9 +127,10 @@
     <section id="home" class="fill">
         <div class="home-background">
             <div class="dark-layer">
+                    <canvas id="lettersCanvas"></canvas>
                 <div class="home-middle-content">
                     <h1 id="aboutMe">I'm a Full Stack Engineer</h1>
-                    <h4>With over 5 years of experience</h4>
+                    <h4>With over 6 years of experience</h4>
                     <div>
                         <button style="background: none;padding: 16px;border-color: white;" class='btn btn-primary' onclick="window.open('Rohith-Resume-2017.pdf')"
                             type="button">Download Resume</button>
@@ -317,7 +320,7 @@
 
     <!-- Resume -->
     <section id="work">
-        <div class="resume-background">
+        <div class="resume-background" id="for_particles">
             <h2 class="section-title">Work</h2>
             <!-- Resume box 1 -->
             <div class="resume-box">
@@ -328,11 +331,11 @@
                     <h4>SixDee Technologies</h4>
                     <p>Working as a senior sofware engineer on various Telecom products in both frontend, backend and Mobile
                         Apps.Products include Subscription Manager,Televoting,Media Platform,AAA(Radius),M2M, CBS,CRM,Selfcare,PRM...
-                        <button class="paperfold-toggle">More...</button>
+                        <button class="paperfold-toggle paperfold-toggle1">More...</button>
                     </p>
 
                 </div>
-                <div class="paper-content">
+                <div class="paper-content" id="paper_content_1">
                     <div class="paper-item">
                         <div>Subscription Manager</div>
                         <div>
@@ -415,10 +418,86 @@
                     <div class="paper-item">
                         <div>Wifi AutoConnector </div>
                         <div>
-                            <b>Worked as a Mobile App developer(Android/IOS) in WiFi AutoConnector Application</b>.This Application
+                            <b>Working as a Mobile App developer(Android/IOS) in WiFi AutoConnector Application</b>.This Application
                             is used for the interaction between Mobile and Wifi Router .The Authentication methods can be
                             PAP,CHAP,EAP etc .Depends on the Supported authentication the app will be connected to Router
                             automatically </div>
+                    </div>
+                </div>
+            </div>
+            <div class="resume-box">
+                    <div class="resume-icon">
+                        <i class="icon icon-basic-sheet-txt"></i>
+                    </div>
+                    <div class="resume-content">
+                        <h4>Freelancer / Hobbyist</h4>
+                        <p>Working as a Freelancer / Hobbyist with enthusiasm to learn new technologies which help me keep adapting 
+                            to the new world.Developed hell of applications where some of them didn't see the internet but some have
+                            thousands of users
+                            <button class="paperfold-toggle paperfold-toggle2">Click to see some..</button>
+                        </p>
+    
+                    </div>
+                    <div class="paper-content" id="paper_content_2">
+                        <div class="paper-item">
+                            <div>JOINT</div>
+                            <div>
+                                Joint is an attempt to connect between multiple people and code a snippet simultaneously with video and chat support.
+                                This is developed by keeping in mind of a distributed system which stores nothing of a person's data. 
+                                Application developed with the support of web-rtc based peer to peer connections (for video and chat).Parallel editing made
+                                possible with firebase.
+                            </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>Open Diary</div>
+                                <div>
+                                    Open diary was an attempt to build an online diary supporting Text,Image and Video , All saved on a centralised server with 
+                                    a bidirectional encryption method.Enabled a user to sign-in and right the daily activities and presented in a notebook view
+                                    with turn-js plugin.Here we have introduced a Voice & Face login methods via mic and webcam present.
+                                </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>Leave Alert</div>
+                                <div>
+                                    A tiny application which can save students information on a cloud database and push an SMS to there parents incase they are on leave.
+                                    Written in React,Node & MongoDB Combination with SMS support form text-local.
+                                </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>Image compressor</div>
+                                <div>
+                                    A tiny application which can compress images to 1 10th of its size with an algorithm called wavelet based compression.Application written with
+                                    .net which implements the algorithm in a simpler way.Similar colors are grouped and stored in a jpg file hence the size got reduced.
+                                </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>News app</div>
+                                <div>
+                                    A simple server based app which can crawl some news websites and show the headlines of all those newspapers in an intuitive way.
+                                    A single place to see multiple news papers headlines and link to those papers site.Written with nodeJS.
+                                </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>Vehicle Locator</div>
+                                <div>
+                                    A vehicle tracker app which track vehicles with the help of IOT.Arduino is used as a hardware to get GPS position and a java server written to 
+                                    receive the data data from Device via TCP connection.
+                                </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>Autonomous car</div>
+                                <div>
+                                    An autonomous car with the intelligence to detect collision and predict the turn after the  collision.Written with C inside Arduino.
+                                    implemented reading data from multiple sensors (proximity,Sonar etc) and controlling a set of motors
+                                </div>
+                        </div>
+                        <div class="paper-item">
+                                <div>Event Management System</div>
+                                <div>
+                                    An Event Management system which can be used to create events and present to the users.Users can book those events and pay for that via online.
+                                    Implemented Stripe as the payment gateway.Written in Java for backend and Node+React for frontend.
+                                </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -515,7 +594,7 @@
                         </li>
                         <li>
                             <h4>Address</h4>
-                            <p>201,Akash Mallige Apartments,BTS Layout,Arekere,Bangalore - 76</p>
+                            <p>E2 607,SNN Raj Serenity,Yelenahalli,Begur-Koppa road,Bangalore - 76</p>
                         </li>
                     </ul>
                 </div>
@@ -594,6 +673,8 @@
     <script src="js/paperfold.js"></script>
     <script src="js/typed.min.js"></script>
     <!-- Custom Scripts -->
+    <script src="https://rawgithub.com/soulwire/sketch.js/v1.0/js/sketch.min.js"></script>
+    
     <script src="js/scripts.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -612,7 +693,7 @@
     <script>
         function myMap() {
             var mapCanvas = document.getElementById("map");
-            var myCenter = new google.maps.LatLng(12.887634, 77.605418);
+            var myCenter = new google.maps.LatLng(12.8589809, 77.6155207);
             var mapOptions = {
                 center: myCenter,
                 zoom: 10,
@@ -645,6 +726,8 @@
     <script>
         // JavaScript code goes here
         var canvas = document.getElementById("myCanvas");
+        var lettersCanvas=document.getElementById("lettersCanvas");
+        var lettersCtx= lettersCanvas.getContext("2d");
         var ctx = canvas.getContext("2d");
         var x = canvas.width / 2;
         var y = canvas.height - 30;
@@ -670,6 +753,45 @@
         var speed = 2;
         var interval;
 
+        var characters = [];
+        /*Modify options here*/
+
+    //possible characters that will appear
+    var characterList = [
+        'java', 'css3', 'html5', 
+        'windows', 'linux', 'mac', 'xCode', 'nodeJS', 'eclipse', 'vs-code', 'atom', 
+        'javascript', 'react', 'react-native', 'native-base', 'handlebars', 'mustache', 'code',
+        'git', 'jenkins', 'android', 'ios', 'electron', 'ant', 'maven', 'webpack','log4j','bootstrap','mongodb',
+        'mysql','redis','ionic','asana','trello','scss','v8','tomcat','jboss','wildfly','sqlite','gradle','spring','express',
+        'jquery','google','.net/C#','ruby','RoR','C','C++','Python','rasberry-pi','arduino','machine-learning','artificial-intelligence',
+        'IoT','CMS','Telecom','iOS','grunt','gulp','angular','front-end','back-end','full-stack','mobile-app','web-app','admin-portal','UI/UX',
+        'live-to-code','programmers-life','music-life','love-life','live-life','drive','database','freelance','hobbyst','gamer','geek','fashion','attittude','late-night-life',
+        'inner-peace','ambience'];
+
+    //stocks possible character attributes
+    var layers = {
+        n: 2, //number of layers
+        letters: [80, 40, 10, 20, 10], //letters per layer (starting from the deepest layer)
+        coef: [0.1, 0.3, 0.4, 0.6, 0.8], //how much the letters move from the mouse (starting from the deepest layer)
+        size: [16, 22, 36, 40, 46], //font size of the letters (starting from the deepest layer)
+        color: ['#fff', '#eee', '#ccc', '#bbb', '#aaa'], //color of the letters (starting from the deepest layer)
+        font: 'Courier' //font family (of every layer)
+    };
+
+    var rnd = {
+        btwn: function(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        },
+        choose: function(list) {
+            return list[rnd.btwn(0, list.length)];
+        }
+    };
+
+    
+    var mouseX = document.body.clientWidth/2;
+    var mouseY = document.body.clientHeight/2;
+
+/*End of options*/
 
         var bricks = [];
         for (c = 0; c < brickColumnCount; c++) {
@@ -683,6 +805,7 @@
             }
         }
         resetGame();
+        initiateLetterCanvas();
 
         document.addEventListener("keydown", keyDownHandler, false);
         document.addEventListener("keyup", keyUpHandler, false);
@@ -831,6 +954,81 @@
             interval = setInterval(draw, speed);
 
         }
+function initiateLetterCanvas(){
+    lettersCanvas.width = document.getElementsByClassName("dark-layer")[0].clientWidth;
+    lettersCanvas.height = document.getElementsByClassName("dark-layer")[0].clientHeight;
+
+    //var ctx = lettersCanvas.getContext('2d');
+
+    /*ANIMATION*/
+
+    document.onmousemove = function(ev) {
+        mouseX = ev.pageX - lettersCanvas.offsetLeft;
+        mouseY = ev.pageY - lettersCanvas.offsetTop;
+
+        if (window.requestAnimationFrame) {
+            requestAnimationFrame(update);
+        } else {
+            update();
+        }
+    };
+    
+    /*REAJUST CANVAS AFTER RESIZE*/ 
+    window.onresize=function() { 
+        location.reload(); 
+    };
+        
+    createLetters(); 
+    update();
+
+    }
+    function update() {
+        clear();
+        render();
+      
+    }
+
+    function clear() {
+        lettersCtx.clearRect(0, 0, lettersCanvas.width, lettersCanvas.height);
+    }
+
+
+        /*LETTER DRAWING*/
+
+    function drawLetter(char) {
+        lettersCtx.font = char.size + 'px ' + char.font;
+        lettersCtx.fillStyle = char.color;
+        
+        var x = char.posX + (mouseX-lettersCanvas.width)*char.coef;
+        var y = char.posY + (mouseY-lettersCanvas.height)*char.coef;
+
+        lettersCtx.fillText(char.char, x, y);
+    }
+function render() {
+for (var i = 0; i < characters.length; i++) { 
+    drawLetter(characters[i]); 
+    } 
+}
+ /*INITIALIZE*/ 
+function createLetters() {
+    for (var i=0; i < layers.n; i++) { 
+        for (var j=0; j < layers.letters[i]; j++) { 
+            var character=rnd.choose(characterList);
+            var x=rnd.btwn(0, lettersCanvas.width); 
+            var y=rnd.btwn(0, lettersCanvas.height); 
+            characters.push(
+                {   char: character, font:layers.font, size: layers.size[i], 
+                    color: layers.color[i], layer: i, coef: layers.coef[i], 
+                    posX: x, posY: y 
+                }
+            ); 
+        } 
+    }
+    } 
+    
+    
+    
+    
     </script>
 
 </body>
