@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rohith Ramachandran - Resume</title>
+    <style>
+        /* Print-friendly CSS */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        @page {
+            size: A4;
+            margin: 20mm 15mm;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 10pt;
+            line-height: 1.5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: #111;
+        }
+
+        h1 {
+            font-size: 24pt;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        h2 {
+            font-size: 14pt;
+            font-weight: 600;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
+            margin-top: 16px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #2a52be;
+        }
+
+        h3 {
+            font-size: 12pt;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        h4 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 9.5pt;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .contact-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .summary {
+            text-align: justify;
+            margin-bottom: 20px;
+            font-size: 10pt;
+        }
+
+        .section {
+            margin-bottom: 16px;
+        }
+
+        .date {
+            font-weight: 400;
+            font-size: 9pt;
+            color: #666;
+        }
+
+        .job {
+            margin-bottom: 16px;
+        }
+
+        .job-details {
+            margin-top: 6px;
+            padding-left: 16px;
+            margin-bottom: 0;
+        }
+
+        .job-details li {
+            margin-bottom: 6px;
+            text-align: justify;
+        }
+
+        .job-details li::marker {
+            color: #2a52be;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            row-gap: 8px;
+            margin-top: 8px;
+        }
+
+        .skill-category {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .skill-list {
+            color: #333;
+        }
+
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .print-break {
+            page-break-inside: avoid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Rohith Ramachandran</h1>
+        <div class="contact-info">
+            <span>📍 Bangalore, India</span>
+            <span>✉️ rohith.karthika@gmail.com</span>
+            <span>🔗 <a href="https://linkedin.com/in/rohith-ramachandran-6bba6638"
+                    style="color:inherit;text-decoration:none;">linkedin.com/in/rohith-ramachandran</a></span>
+            <span>🔗 <a href="https://github.com/rohithramachandran"
+                    style="color:inherit;text-decoration:none;">github.com/rohithramachandran</a></span>
+        </div>
+    </div>
+
+    <div class="section summary">
+        <h2>Professional Summary</h2>
+        <p>Technical Architect with nearly 14 years of hands-on experience driving enterprise-grade telecom products
+            from inception to production. Instrumental in scaling engineering teams from 200 to 2,000+ members while
+            leading the development of comprehensive BSS platforms. Expertise spans the entire product lifecycle: from
+            delivering customer demos and authoring architectural documentation (SoW, HLD, LLD), to pioneering
+            AI-assisted software development and orchestrating automated testing protocols. Deep expertise in TMF
+            (TeleManagement Forum) Open API frameworks, successfully leading organizational API certifications. Proven
+            track record of deploying robust telecom solutions on Kubernetes and cloud environments globally, with
+            extensive international deployment experience across 10+ countries.</p>
+    </div>
+
+    <div class="section">
+        <h2>Core Competencies & Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">Architecture</div>
+            <div class="skill-list">Microservices, REST APIs, Telecom BSS, CRM, Online Charging Systems (OCS), Product
+                Catalogue, SOA, High Availability</div>
+
+            <div class="skill-category">Frontend</div>
+            <div class="skill-list">React, Angular, TypeScript, HTML5, CSS3, Webpack</div>
+
+            <div class="skill-category">Backend</div>
+            <div class="skill-list">Node.js, Express, Java, Spring Boot, Python, C++</div>
+
+            <div class="skill-category">Database</div>
+            <div class="skill-list">Oracle, MongoDB, PostgreSQL, SQL, Redis, ChromaDB, Pinecone</div>
+
+            <div class="skill-category">Cloud & DevOps</div>
+            <div class="skill-list">Kubernetes, Docker, Linux, Git, Jenkins, CI/CD, Ansible, AWS</div>
+
+            <div class="skill-category">Monitoring</div>
+            <div class="skill-list">Kibana, Grafana, Prometheus</div>
+
+            <div class="skill-category">AI / ML</div>
+            <div class="skill-list">Machine Learning, NLP, LangGraph, LangChain, PyTorch, Ollama, RAG Pipelines</div>
+
+            <div class="skill-category">Security & Testing</div>
+            <div class="skill-list">SonarQube, OWASP ZAP, Snyk, Trivy, Robot Framework, Playwright, Claude Code</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Professional Experience</h2>
+
+        <div class="job print-break">
+            <h3><span>SixDee Technologies</span> <span class="date">Jun 2012 — Present</span></h3>
+
+            <div style="margin-top: 10px;">
+                <div style="margin-bottom: 12px;">
+                    <h4 style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                        <span style="color: #2a52be;">Senior Technical Architect</span>
+                        <span style="font-weight: 400; font-size: 9pt; color: #666;">Sep 2025 — Present</span>
+                    </h4>
+                    <ul class="job-details">
+                        <li><strong>Strategic Leadership:</strong> Driving technical strategy for a 2,000+ member
+                            engineering organization. Overseeing pre-sales initiatives, conducting global product demos,
+                            and authoring pivotal SoW, HLD, and LLD documentation.</li>
+                        <li><strong>AI-Driven Engineering:</strong> Standardizing AI-assisted development (Claude Code)
+                            and automated testing protocols (Robot Framework, Playwright) to dramatically increase
+                            delivery velocity and code quality.</li>
+                        <li><strong>Post-Production Strategy:</strong> Establishing robust DevOps pipelines and
+                            operational monitoring stacks (Kibana, Grafana, Prometheus) while overseeing high-level
+                            Application Development & Maintenance (ADM).</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <h4 style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                        <span style="color: #2a52be;">Technical Architect</span>
+                        <span style="font-weight: 400; font-size: 9pt; color: #666;">Sep 2021 — Sep 2025</span>
+                    </h4>
+                    <ul class="job-details">
+                        <li><strong>Core Platform Architecture:</strong> Architected enterprise-grade telecom platforms
+                            including CRM, Convergent Billing System (CBS), and real-time Online Charging Systems (OCS)
+                            processing millions of subscribers.</li>
+                        <li><strong>TMF Open API Certification:</strong> Led the organization through rigorous TMF
+                            conformance certification, successfully certifying TMF 620, 621, 632, 635, and multiple
+                            other APIs to ensure industry interoperability.</li>
+                        <li><strong>Cloud-Native Deployments:</strong> Directed the migration and deployment of
+                            distributed telecom solutions onto Kubernetes (K8s) and VM-based cloud environments,
+                            optimizing for high availability.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <h4 style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                        <span style="color: #2a52be;">Senior Software Engineer</span>
+                        <span style="font-weight: 400; font-size: 9pt; color: #666;">Oct 2016 — Sep 2021</span>
+                    </h4>
+                    <ul class="job-details">
+                        <li><strong>Full Stack Development:</strong> Engineered seamless Selfcare Web & Mobile
+                            Applications, integrating deeply with backend CRM and CBS modules to empower subscriber
+                            self-service.</li>
+                        <li><strong>International Deployments:</strong> Travelled to 10+ countries to lead on-site
+                            deployments at major mobile operator networks. Handled UAT support, live cutovers, and
+                            knowledge transfer to global teams.</li>
+                        <li><strong>System Integration:</strong> Built channel-agnostic Subscription Management
+                            platforms and intricate Partner Management Systems (PRM) for vendor onboarding and revenue
+                            settlement.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-bottom: 12px;">
+                    <h4 style="display: flex; justify-content: space-between; margin-bottom: 2px;">
+                        <span style="color: #2a52be;">Software Developer</span>
+                        <span style="font-weight: 400; font-size: 9pt; color: #666;">Jun 2012 — Sep 2016</span>
+                    </h4>
+                    <ul class="job-details">
+                        <li><strong>Backend Systems:</strong> Developed mediation layers responsible for collecting,
+                            transforming, and routing CDRs/EDRs between network elements and billing engines.</li>
+                        <li><strong>IoT Connectivity:</strong> Contributed to the development of an enterprise IoT SIM
+                            Connectivity Management Platform (CMP).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section print-break">
+        <h2>Education</h2>
+
+        <div class="education-item">
+            <div>
+                <span style="font-weight: 600;">Bachelor of Technology, Computer Science</span><br>
+                <span style="color: #555;">Anna University</span>
+            </div>
+            <div class="date">2008 — 2012</div>
+        </div>
+
+        <div class="education-item">
+            <div>
+                <span style="font-weight: 600;">Front End Developer Certification, Computer Science</span><br>
+                <span style="color: #555;">freeCodeCamp</span>
+            </div>
+            <div class="date">2017</div>
+        </div>
+    </div>
+</body>
+
+</html>
